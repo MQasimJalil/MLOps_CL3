@@ -10,5 +10,4 @@ COPY . /app
 # If you are using a different package manager, adjust this command
 RUN pip install -r requirements.txt
 
-# Run the application
 CMD ["python", "app.py"]
