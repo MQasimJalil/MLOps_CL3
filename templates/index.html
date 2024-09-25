@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housing Price Prediction</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body{
+            width: 100%;
+            height: 96vh;
+            overflow-x: hidden;
+            background-image: url('/static/back.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            color: black;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            opacity: 0.8; /* Adjust the opacity for transparency */
+        }
+        .box {
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+        .input-field {
+            margin-bottom: 10px;
+        }
+        .heading {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Page Heading -->
+        <strong><h1 class="heading text-center">Housing Price Prediction</h1></strong>
+        <div class="row">
+            <!-- First Box with Input Fields -->
+            <div class="col-md-6">
+                <div class="box bg-light">
+                    <h4>Input Fields</h4>
+                    <form action="/predict" method="post">
+                        <div class="form-row">
+                            <div class="col-md-6 input-field">
+                                <input  name="longitude" type="text" class="form-control" placeholder="Longitude">
+                            </div>
+                            <div class="col-md-6 input-field">
+                                <input  name="latitude" type="text" class="form-control" placeholder="Latitude">
+                            </div>
+                            <div class="col-md-6 input-field">
+                                <input  name="housing_median_age" type="text" class="form-control" placeholder="House Age">
+                            </div>
+                            <div class="col-md-6 input-field">
+                                <input  name="total_rooms" type="text" class="form-control" placeholder="Total Rooms">
+                            </div>
+                            <div class="col-md-6 input-field">
+                                <input  name="total_bedrooms" type="text" class="form-control" placeholder="Total Bedrooms">
+                            </div>
+                            <div class="col-md-6 input-field">
+                                <input  name="population" type="text" class="form-control" placeholder="Population">
+                            </div>
+                            <div class="col-md-6 input-field">
+                                <input  name="households" type="text" class="form-control" placeholder="Number of households">
+                            </div>
+                            <div class="col-md-6 input-field">
+                                <input  name="median_income" type="text" class="form-control" placeholder="Average income">
+                            </div>
+                            <div class="col-md-12 input-field">
+                                <input name="ocean_proximity"  type="text" class="form-control" placeholder="Ocean Proximity">
+                            </div>
+                            <div class="col-md-12">
+                                <button class="btn btn-dark btn-block">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Second Box with Sample Data -->
+            <div class="col-md-6">
+                <div class="box bg-light">
+                    <h4>Sample Data</h4>
+                    <ul>
+                        <li>longitude = -122.23</li>
+                        <li>latitude = 37.88</li>
+                        <li>housing_median_age = 41</li>
+                        <li>total_rooms = 880</li>
+                        <li>total_bedrooms = 129</li>
+                        <li>population = 332</li>
+                        <li>households = 126</li>
+                        <li>median_income = 8.3252</li>
+                        <li>ocean_proximity = 2</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
